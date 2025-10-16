@@ -1,0 +1,486 @@
+:root {
+  --primary-1: #22324c;
+  --primary-2: #052a82;
+  --primary-3: #fbd07b;
+  --bg: #ffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--primary-1);
+  color: #0b1169;
+  min-height: fit-content;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.1rem 7%;
+  background-color: #ffff;
+  border-bottom: 1px solid var(--primary-1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+}
+
+.navbar .navbar-nav {
+  display: flex;
+}
+
+.navbar .navbar-nav a {
+  color: #22324c;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary-3);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary-3);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #22324c;
+  margin: 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary-3);
+}
+
+/* Sembunyikan hamburger menu */
+#hamburger-menu {
+  display: none;
+}
+
+/* Hero Section */
+.hero {
+  color: #22324c;
+  background-color: var(--bg);
+  padding: 8rem 7% 12rem;
+}
+
+.hero h1 {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.hero h1 span {
+  color: #fbd07b;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.hero .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+
+/* Kontrol Ukuran Gambar */
+.hero .hero-img {
+  flex: 1 1 0;
+  max-width: 400px; /* <--- Ini adalah batas lebar maksimum gambar */
+  width: 100%;
+}
+
+.hero .hero-img img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 1px;
+}
+
+.hero .hero-col {
+  flex-grow: 1;
+  flex-basis: 300px;
+  padding: 1rem;
+}
+
+.hero .hero-col p {
+  text-align: justify;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+}
+.hero .row .hero-img img {
+  width: 50%;
+}
+
+/* About Section */
+.about {
+  color: #ffff;
+  padding: 8rem 7% 12rem;
+}
+
+.about h2 {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.about h2 span {
+  color: #fbd07b;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.about .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+
+/* Kontrol Ukuran Gambar */
+.about .about-img {
+  flex: 1 1 0;
+  max-width: 400px; /* <--- Ini adalah batas lebar maksimum gambar */
+  width: 100%;
+}
+
+.about .about-img img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 1px;
+}
+
+.about .about-col {
+  flex-grow: 1;
+  flex-basis: 300px;
+  padding: 1rem;
+}
+
+.about .about-col p {
+  text-align: justify;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+}
+.about .row .about-img img {
+  width: 50%;
+}
+
+/* Menu Section */
+.menu {
+  color: #22324c;
+  background-color: var(--primary-3);
+  padding: 8rem 7% 12rem;
+}
+
+.menu h2 {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.menu h2 span {
+  color: #ffff;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.menu .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+
+/* Kontrol Ukuran Gambar */
+.menu .menu-img {
+  flex: 1 1 0;
+  max-width: 400px; /* <--- Ini adalah batas lebar maksimum gambar */
+  width: 100%;
+}
+
+.menu .menu-img img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 1px;
+}
+
+.menu .menu-col {
+  flex-grow: 1;
+  flex-basis: 300px;
+  padding: 1rem;
+}
+
+.menu .menu-col p {
+  text-align: justify;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+}
+.menu .row .menu-img img {
+  width: 50%;
+}
+
+/* Contact Section */
+.contact {
+  color: #22324c;
+  background-color: var(--bg);
+  padding: 12rem 7% 12rem;
+}
+
+.contact h2 {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.contact h2 span {
+  color: #fbd07b;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.contact .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+
+/* Kontrol Ukuran Gambar */
+.contact .contact-img {
+  flex: 1 1 0;
+  max-width: 390px; /* <--- Ini adalah batas lebar maksimum gambar */
+  width: 100%;
+}
+
+.contact .contact-img img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 1px;
+}
+
+.contact .contact-col {
+  flex-grow: 1;
+  flex-basis: 300px;
+  padding: 1rem;
+}
+
+.contact .contact-col p {
+  text-align: justify;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+}
+.contact .row .contact-img img {
+  width: 50%;
+}
+
+/* Footer */
+footer {
+  background-color: var(--bg);
+  text-align: center;
+  padding-top: 0rem;
+  padding-bottom: 8rem;
+  margin-top: 0rem;
+}
+
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  color: #22324c;
+  margin: 1rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+  color: var(--primary-3);
+}
+
+footer .links {
+  margin-bottom: 1.2rem;
+  size: 2rem;
+}
+
+footer .links a {
+  color: #22324c;
+  padding: 0.7rem 1rem;
+  font-size: 0.9rem;
+}
+
+footer .credit {
+  color: #22324c;
+  font-size: 1.2rem;
+}
+
+footer .credit a {
+  color: var(--bg);
+  font-weight: 700;
+}
+
+/* --- FLOATING BUTTONS CONTAINER (Kunci Bersebelahan) --- */
+.floating-buttons-container {
+  /* Fix posisi di layar */
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+
+  /* Menggunakan Flexbox untuk mensejajarkan tombol secara horizontal */
+  display: flex;
+  gap: 1.2rem; /* Jarak antara Tombol 1 dan Tombol 2 */
+  align-items: center;
+}
+
+/* --- STYLING TOMBOL INDIVIDUAL --- */
+.floating-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 1.8rem;
+  color: #ffff;
+  border-radius: 3rem; /* Bentuk persegi panjang melengkung */
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.floating-btn i {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.8rem; /* Jarak antara ikon dan teks */
+}
+
+/* --- TOMBOL 1: INSTAGRAM --- */
+.btn-ig {
+  background-color: #bf168a;
+}
+
+.btn-ig:hover {
+  background-color: #80186c; /* Orange-Red Instagram hover color */
+  transform: translateY(-3px);
+}
+
+/* --- TOMBOL 2: EMAIL --- */
+.btn-email {
+  background-color: #c60d0d;
+}
+
+.btn-email:hover {
+  background-color: #b50000;
+  transform: translateY(-3px);
+}
+
+/* Media Queris */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  /* hamburger menu di layar kecil */
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  /* Sembunyikan navigasi di layar kecil */
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: var(--bg);
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+    display: block;
+    padding: 2rem;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--primary-1);
+    display: block;
+    margin: 1.5rem 0;
+    font-size: 1.5rem;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+  .about .row,
+  .menu .row,
+  .contact .row,
+  .hero .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about .row .about-img img,
+  .menu .row .menu-img img,
+  .contact .row .contact-img img,
+  .hero .row .hero-img img {
+    width: 100%;
+    max-width: 100%;
+    height: 24rem;
+    object-fit: cover;
+  }
+
+  .about .row .content {
+    padding: 0;
+  }
+
+  .about .row .content h3 {
+    margin-top: 1;
+    font-size: 2rem;
+  }
+}
+
+.menu p {
+  font-size: 1.3rem;
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
